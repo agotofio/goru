@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art-Pub Gorynych</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">GORYNYCH</div>
+  <nav>
+    <a href="#">Головна</a>
+    <a href="#">Меню</a>
+    <a href="#">Галерея</a>
+    <a href="#">Бронювання</a>
+    <a href="#">Контакти</a>
+  </nav>
+  <button class="btn-primary" id="openBooking">Забронювати</button>
+</header>
+
+<main class="hero">
+  <h1>ART-PUB GORYNYCH</h1>
+  <p>бар • кухня • кальяни</p>
+  <button class="btn-primary" id="openBookingHero">Забронювати столик</button>
+</main>
+
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <button class="close" id="closePopup">✕</button>
+    <h2>Бронювання столика</h2>
+
+    <label>Дата</label>
+    <input type="date"/>
+
+    <label>Час</label>
+    <div class="time-buttons">
+      <button>18:00</button><button>19:00</button><button>20:00</button>
+      <button>21:00</button><button>22:00</button>
+    </div>
+
+    <label>Кількість гостей</label>
+    <input type="number" min="1" value="2"/>
+
+    <label>Зал</label>
+    <select>
+      <option>Будь-який вільний</option>
+      <option>Чорний зал</option>
+      <option>Білий зал</option>
+      <option>Кальянний зал</option>
+    </select>
+
+    <label>Телефон</label>
+    <input type="tel" placeholder="+380..." />
+
+    <button class="btn-primary full" id="openPayment">Оплатити та забронювати</button>
+    <p class="rules">Передплата не повертається. Тестова оплата.</p>
+  </div>
+</div>
+
+<div class="popup-overlay" id="paymentPopup">
+  <div class="popup">
+    <h2>Оплата бронювання</h2>
+    <p>До сплати: <strong id="paymentAmount">0 грн</strong></p>
+    <button class="btn-primary full" id="confirmPayment">Підтвердити оплату</button>
+  </div>
+</div>
+
+<div class="popup-overlay" id="successPopup">
+  <div class="popup">
+    <h2>✅ Бронювання підтверджено</h2>
+    <button class="btn-primary full" id="closeSuccess">Закрити</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

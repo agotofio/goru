@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Art-Pub Gorynych • Чернігів</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="index.html">GORYNYCH</a>
+  <nav class="nav">
+    <a class="active" href="index.html">Головна</a>
+    <a href="pages/menu.html">Меню</a>
+    <a href="pages/gallery.html">Галерея</a>
+    <a href="pages/booking.html">Бронювання</a>
+    <a href="pages/contacts.html">Контакти</a>
+  </nav>
+  <button class="btn btn-primary" data-open-booking>Забронювати</button>
+</header>
+
+
+<main class="hero">
+  <div class="container hero-inner">
+    <div class="badge">🐉 Art-Pub • Чернігів</div>
+    <h1 class="h1">ART-PUB GORYNYCH</h1>
+    <div class="hero-sub">бар • кухня • кальяни</div>
+    <button class="btn btn-primary" data-open-booking>Забронювати столик</button>
+
+    <div class="section kpis">
+      <div class="grid grid3">
+        <div class="card kpi"><b>3 зали</b><div class="p">Чорний, білий та кальянний — обирайте або довіртеся нам.</div></div>
+        <div class="card kpi"><b>Мангал</b><div class="p">Шашлик, реберця, стейки — як у меню зі сторіс.</div></div>
+        <div class="card kpi"><b>Анти-фейк бронь</b><div class="p">Передплата: 400 грн/гість або 5000 грн для банкетів.</div></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid2">
+      <div class="card">
+        <h2 class="h2">Про заклад</h2>
+        <div class="p">
+          Art-Pub Gorynych — атмосферний паб з кухнею, баром та кальянами.
+          Для компаній є <b>банкетка</b> (умови обговорюються з гостем).
+        </div>
+        <div class="p" style="margin-top:10px">
+          Зали: <b>чорний — 30 столів</b>, <b>білий — 6 столів</b>, <b>кальянний — 10 столів</b>.
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="h2">Швидкі посилання</h2>
+        <div class="grid" style="gap:10px">
+          <a class="btn" href="pages/menu.html">Переглянути меню</a>
+          <a class="btn" href="pages/gallery.html">Подивитися фото</a>
+          <button class="btn btn-primary" data-open-booking>Забронювати</button>
+        </div>
+        <div class="hint" style="margin-top:12px">Меню на сайті відповідає вашим скрінам зі сторіс.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid3">
+      <div class="card">
+        <h2 class="h2">Меню</h2>
+        <div class="p">Страви, мангал, дошки на компанію, десерти та напої.</div>
+        <div style="margin-top:12px"><a class="btn" href="pages/menu.html">Відкрити меню</a></div>
+      </div>
+      <div class="card">
+        <h2 class="h2">Галерея</h2>
+        <div class="p">Фото закладу та атмосфери. Легко замінити на ваші.</div>
+        <div style="margin-top:12px"><a class="btn" href="pages/gallery.html">Відкрити галерею</a></div>
+      </div>
+      <div class="card">
+        <h2 class="h2">Бронювання</h2>
+        <div class="p">Вибір часу та залу. Передплата підтверджує бронь.</div>
+        <div style="margin-top:12px"><a class="btn" href="pages/booking.html">Деталі броні</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div>© Art-Pub Gorynych • Чернігів</div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/art_pub_gorynych/" target="_blank" rel="noreferrer">Instagram</a>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="bookingModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Бронювання">
+    <button class="modal-close" data-close-booking aria-label="Закрити">✕</button>
+    <h2>Бронювання столика</h2>
+
+    <form id="bookingForm" class="form">
+      <div class="grid2">
+        <div>
+          <label>Дата</label>
+          <input required type="date" name="date"/>
+        </div>
+        <div>
+          <label>Час</label>
+          <input required type="time" name="time" step="900"/>
+          <div class="time-chips" data-time-chips>
+            <button type="button" class="chip">18:00</button>
+            <button type="button" class="chip">19:00</button>
+            <button type="button" class="chip">20:00</button>
+            <button type="button" class="chip">21:00</button>
+            <button type="button" class="chip">22:00</button>
+          </div>
+          <div class="hint">Мінімум за 20 хвилин. Слот броні — 2 години.</div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <label>Кількість гостей</label>
+          <div class="stepper">
+            <button type="button" class="step" data-step="-1">−</button>
+            <input required type="number" name="guests" min="1" value="2"/>
+            <button type="button" class="step" data-step="1">+</button>
+          </div>
+        </div>
+        <div>
+          <label>Зал</label>
+          <select name="hall">
+            <option value="any">Будь-який вільний</option>
+            <option value="black">Чорний зал (30 столів)</option>
+            <option value="white">Білий зал (6 столів)</option>
+            <option value="hookah">Кальянний зал (10 столів)</option>
+          </select>
+          <div class="hint">Якщо вам байдуже — оберіть «будь-який вільний».</div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <label>Формат</label>
+          <select name="type" id="bookingType">
+            <option value="table">Столик</option>
+            <option value="banquet">Банкет / компанія</option>
+          </select>
+          <div class="hint">Для банкетів депозит фіксований: 5000 грн.</div>
+        </div>
+        <div>
+          <label>Телефон</label>
+          <input required type="tel" name="phone" placeholder="+380..." />
+        </div>
+      </div>
+
+      <div class="summary">
+        <div>Передплата:</div>
+        <div class="sum"><span id="depositSum">0</span> грн</div>
+      </div>
+
+      <button class="btn btn-primary btn-block" type="submit">Перейти до оплати</button>
+      <div class="rules">
+        Передплата не повертається у разі неявки. Оплата на сайті — для підтвердження бронювання.
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="paymentModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Оплата">
+    <button class="modal-close" data-close-payment aria-label="Закрити">✕</button>
+    <h2>Оплата бронювання</h2>
+    <div class="paybox">
+      <div class="payline">До сплати: <strong><span id="payAmount">0</span> грн</strong></div>
+      <div class="paymethods">
+        <div class="paymethod"><div class="pm-title">Оплата карткою</div><div class="pm-sub">Visa / Mastercard</div></div>
+        <div class="paymethod"><div class="pm-title">Apple Pay</div><div class="pm-sub">якщо підтримується пристроєм</div></div>
+        <div class="paymethod"><div class="pm-title">Google Pay</div><div class="pm-sub">якщо підтримується браузером</div></div>
+      </div>
+      <button class="btn btn-primary btn-block" id="confirmPaymentBtn">Оплатити (тест)</button>
+      <div class="hint center">Тестовий режим: кошти не списуються.</div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" aria-live="polite"></div>
+
+<script src="js/app.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

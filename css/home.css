@@ -1,0 +1,14 @@
+
+.hero{
+  min-height:72vh;
+  display:grid;place-items:center;
+  background:
+    radial-gradient(900px 420px at 70% 20%, rgba(142,27,27,.18), transparent 60%),
+    radial-gradient(700px 380px at 20% 70%, rgba(255,255,255,.08), transparent 55%);
+}
+.hero-inner{padding:46px 0;text-align:center}
+.hero-sub{color:var(--muted);margin:10px 0 22px}
+.kpis{margin-top:26px}
+.kpi{display:flex;gap:12px;align-items:flex-start}
+.kpi b{display:block}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}
